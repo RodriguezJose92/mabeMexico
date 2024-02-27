@@ -163,5 +163,5 @@ async function mudiExperience({skuNumber,fatherContainer}){
 
 mudiExperience({
     skuNumber:"WEM7643CSIS0_MabeMex",
-    fatherContainer: document.body.querySelector(`.owl-wrapper-outer`)
+    fatherContainer: document.body.querySelector(`.carousel`)
 })
