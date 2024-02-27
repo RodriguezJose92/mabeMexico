@@ -90,7 +90,7 @@ function createModal(){
 
     /** Init ARExperience */
     modalMudi.querySelector(`#btnVerEnMiEspacioId`).addEventListener('click',()=>{
-        if(window.innerWidth>1000) initARDESK();
+        if(window.innerWidth>1000) console.log('le di click al boton AR');
         else window.open(`${dataServer.URL_AR}`,"_BLANK")
     });
 
