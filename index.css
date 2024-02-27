@@ -1,0 +1,105 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.owl-wrapper-outer {
+    margin-top: 150px;
+    position: relative;
+}
+
+.ContainerBtnsMudi {
+    width: max-content;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.btnMudi3D {
+    width: 80px;
+}
+
+.mudiTooltip {
+    position: absolute;
+    top: -80%;
+    right: 0%;
+    width: 250px;
+    text-align: center;
+    background-color: #ff820b;
+    padding: 0px 20px;
+    border-radius: 50px;
+    margin: 0;
+    color: white;
+}
+
+.paragraphMudi {
+    font-size: 13px;
+    margin: 2px;
+}
+
+.newMudi {
+    font-size: 18px;
+}
+
+.mudiModal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.366);
+    width: 100%;
+    height: 100vh;
+}
+
+.iframeMudi3D {
+    width: 70%;
+    height: 80vh;
+    background-color: white;
+    border-radius: 10px;
+    position: relative;
+}
+
+.closeModalMudi {
+    position: absolute;
+    top: -2.5%;
+    right: -1%;
+    background-color: #007297;
+    margin: 8px 4px;
+    color: white;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.modelMudi {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.btnMudiAR {
+    position: absolute;
+    width: 15%;
+    top: 3%;
+    right: 2%;
+}
+
+
+@media screen and (max-width:500px) {
+    .iframeMudi3D {
+        width: 90%;
+    }
+
+    .btnMudiAR {
+        position: absolute;
+        bottom: 0% !important;
+        width: 40%;
+    }
+}
