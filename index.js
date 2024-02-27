@@ -166,7 +166,12 @@ async function mudiExperience({skuNumber,fatherContainer}){
 
 };
 
-mudiExperience({
-    skuNumber:"WEM7643CSIS0_MabeMex",
-    fatherContainer: document.body.querySelector(`.carousel`)
-})
+const element = new URLSearchParams(window.location.search).get('mudiTest');
+
+if(element=="true"){
+    window.location.search
+    mudiExperience({
+        skuNumber:"WEM7643CSIS0_MabeMex",
+        fatherContainer: document.body.querySelector(`.owl-wrapper-outer`)
+    })
+}
