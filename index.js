@@ -158,8 +158,13 @@ async function mudiExperience({skuNumber,fatherContainer}){
 
     createStyles();
     createButon( fatherContainer );
-    
-}
+
+    dataLayer.push({
+        event: "visualizacionMudi",
+        valorMudi: "1"
+    });  
+
+};
 
 mudiExperience({
     skuNumber:"WEM7643CSIS0_MabeMex",
