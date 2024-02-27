@@ -20,7 +20,7 @@ body {
 }
 
 .btnMudi3D {
-    width: 80px;
+    width: 80px !important;
 }
 
 .mudiTooltip {
