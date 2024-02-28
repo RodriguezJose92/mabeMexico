@@ -169,7 +169,7 @@ async function mudiExperience({skuNumber,fatherContainer}){
     createButon( fatherContainer ); 
 };
 
-const verify = new URLSearchParams(window.location.search).get('mudiTest')
+const verify = new URLSearchParams(window.location.search).get('muditest')
 
 verify && mudiExperience({
     skuNumber:"WEM7643CSIS0_MabeMex",
