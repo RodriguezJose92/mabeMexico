@@ -23,7 +23,7 @@
     right: -60%;
     width: 351px;
     text-align: center;
-    background-color: #ff820b;
+    background-color: #b5b5b5;
     padding: 0px 20px;
     border-radius: 50px;
     margin: 0;
@@ -36,8 +36,8 @@
     content: '_';
     font-size: 10px;
     position: absolute;
-    background-color: #ff820b;
-    color: #ff820b;
+    background-color: #b5b5b5;
+    color: #b5b5b5;
     width: 12px;
     bottom: -11px;
     right: 15%;
