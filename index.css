@@ -1,44 +1,54 @@
-body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.owl-wrapper-outer {
-    margin-top: 150px;
-    position: relative;
-}
-
 .ContainerBtnsMudi {
     width: max-content;
     display: flex;
     justify-content: center;
     flex-direction: column;
     position: absolute;
-    top: 0;
+    top: 60px;
     right: 0;
 }
 
 .btnMudi3D {
     width: 80px !important;
+    cursor: pointer;
+    -webkit-box-shadow: 10px 10px 33px -18px rgba(0, 0, 0, 0.58);
+    -moz-box-shadow: 10px 10px 33px -18px rgba(0, 0, 0, 0.58);
+    box-shadow: 10px 10px 33px -18px rgba(0, 0, 0, 0.58);
+    border-radius: 50px;
 }
 
 .mudiTooltip {
     position: absolute;
-    top: -80%;
-    right: 0%;
-    width: 250px;
+    top: -70%;
+    right: -60%;
+    width: 351px;
     text-align: center;
     background-color: #ff820b;
     padding: 0px 20px;
     border-radius: 50px;
     margin: 0;
     color: white;
+    transform: scale(0.8);
+
+}
+
+.mudiTooltip::after {
+    content: '_';
+    font-size: 10px;
+    position: absolute;
+    background-color: #ff820b;
+    color: #ff820b;
+    width: 12px;
+    bottom: -11px;
+    right: 15%;
+    border-bottom-right-radius: 20px;
 }
 
 .paragraphMudi {
-    font-size: 13px;
+    font-size: 15px;
     margin: 2px;
+    line-height: 19px;
+    padding: 5px 0px;
 }
 
 .newMudi {
@@ -76,6 +86,8 @@ body {
     border: none;
     font-size: 20px;
     cursor: pointer;
+    border-radius: 9px;
+    padding: 4px 10px;
 }
 
 .modelMudi {
@@ -91,6 +103,64 @@ body {
     right: 2%;
 }
 
+.containerQRMudi {
+    position: absolute;
+    top: 46px;
+    transform: scale(0.8);
+    right: -3px;
+    display: flex;
+    flex-direction: column;
+    background-color: #007297;
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    z-index: 0;
+    color: white;
+}
+
+.mudiQR {
+    width: 250px;
+    padding: 30px;
+    background-color: white;
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+.containerText {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.stepMudi {
+    width: 35px;
+}
+
+.titleContainer {
+    display: flex;
+    gap: 5px;
+    justify-content: flex-start;
+    align-items: flex-end;
+}
+
+.titleContainer:first-child {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.hrTitle {
+    margin: 2px auto 10px auto;
+    border: none;
+    outline: none;
+    height: 2px;
+    width: 90%;
+    background-color: white;
+}
 
 @media screen and (max-width:500px) {
     .iframeMudi3D {
@@ -99,6 +169,7 @@ body {
 
     .btnMudiAR {
         position: absolute;
+        top: 5%;
         bottom: 0% !important;
         width: 40%;
     }

@@ -1,5 +1,5 @@
 /** Server response */
-let dataServer;
+let dataServerMudi;
 
 async function conectServer(skuNumber){
 
@@ -49,7 +49,7 @@ function createButon(father){
         tooltip     = document.createElement('P');
         tooltip.id  = `tooltipMudi` ;
         tooltip.classList.add(`mudiTooltip`);
-        tooltip.innerHTML=`<p class="paragraphMudi"><b class="newMudi">¡Nuevo!</b><br> Descubre como se ve este producto en <b>3D y realidad aumentada</b> en tu espacio</p>`;
+        tooltip.innerHTML=`<p class="paragraphMudi"><b class="newMudi">¡Nuevo!</b> Descubre como se ve este producto en <b>3D y realidad aumentada</b> en tu espacio</p>`;
     
         /** The 3D botton is an image */
         const 
@@ -64,7 +64,8 @@ function createButon(father){
     container.appendChild(button3D);
 
     /** Add container to DOM */
-    father.appendChild(container);
+    if(window.innerWidth>1000)father[0].appendChild(container);
+    else  father[1].appendChild(container);
 
 };
 
@@ -90,7 +91,7 @@ function createModal(){
 
     /** Init ARExperience */
     modalMudi.querySelector(`#btnVerEnMiEspacioId`).addEventListener('click',()=>{
-        if(window.innerWidth>1000) console.log('le di click al boton AR');
+        if(window.innerWidth>1000) initARDESK();
         else window.open(`${dataServer.URL_AR}`,"_BLANK")
     });
 
@@ -99,6 +100,12 @@ function createModal(){
 };
 
 function initARDESK(){
+
+    if(document.body.querySelector('#containerQR')) {
+        document.body.querySelector('#containerQR').remove();
+        return
+    };
+
     const 
     modalMudi = document.createElement('DIV');
     modalMudi.id=`containerQR`;
@@ -106,43 +113,45 @@ function initARDESK(){
     modalMudi.innerHTML=`
         <img class="mudiQR" src="${dataServer.URL_QR}" >
 
-        <div>
-            <div>
+        <div class="containerText">
+            <div class="titleContainer">
                 <h4>ESCANÉAME PARA <br><b>VER EN TU ESPACIO</b></h4>
-                <hr>
+                <hr class="hrTitle">
             </div>
 
-            <div>
-                <div>
-                    <img src="">
+            <div class="titleContainer">
+                <div class="iconTitle">
+                    <img class="stepMudi step1" src="https://cdn.jsdelivr.net/gh/RodriguezJose92/mabeMexico@latest/assets/step1Mabe.webp">
                 </div>
-                <p>Apunta el teléfono al piso.</p>
+                <p class="textInfoMudi">Apunta el teléfono al piso.</p>
             </div>
 
-            <div>
-                <div>
-                    <img src="">
+            <div class="titleContainer">
+                <div class="iconTitle">
+                    <img class="stepMudi step2" src="https://cdn.jsdelivr.net/gh/RodriguezJose92/mabeMexico@latest/assets/step2Mabe.webp">
                 </div>
-                <p>Desplaza para visualizar.</p>
+                <p class="textInfoMudi">Desplaza para visualizar.</p>
             </div>
 
-            <div>
-                <div>
-                    <img src="">
+            <div class="titleContainer">
+                <div class="iconTitle">
+                    <img class="stepMudi step3" src="https://cdn.jsdelivr.net/gh/RodriguezJose92/mabeMexico@latest/assets/step3Mabe.webp">
                 </div>
-                <p>Amplia y detalla el producto.</p>
+                <p class="textInfoMudi">Amplia y detalla el producto.</p>
             </div>
 
-            <div>
-                <div>
-                    <img src="">
+            <div class="titleContainer">
+                <div class="iconTitle">
+                    <img class="stepMudi step4" src="https://cdn.jsdelivr.net/gh/RodriguezJose92/mabeMexico@latest/assets/step4Mabe.webp">
                 </div>
-                <p>Toca dos veces para restablecer.</p>
+                <p class="textInfoMudi">Toca dos veces para restablecer.</p>
             </div>
 
         </div>
 
     `;
+
+    document.body.querySelector('.iframeMudi3D').appendChild(modalMudi)
 };
 
 async function mudiExperience({skuNumber,fatherContainer}){
@@ -157,21 +166,13 @@ async function mudiExperience({skuNumber,fatherContainer}){
     };
 
     createStyles();
-    createButon( fatherContainer );
-
-    dataLayer.push({
-        event: "visualizacionMudi",
-        valorMudi: "1"
-    });  
-
+    createButon( fatherContainer ); 
 };
 
-const element = new URLSearchParams(window.location.search).get('mudiTest');
+const verify = new URLSearchParams(window.location.search).get('mudiTest')
 
-if(element=="true"){
-    window.location.search
-    mudiExperience({
-        skuNumber:"WEM7643CSIS0_MabeMex",
-        fatherContainer: document.body.querySelector(`.owl-wrapper-outer`)
-    })
-}
+verify && mudiExperience({
+    skuNumber:"WEM7643CSIS0_MabeMex",
+    fatherContainer: document.body.querySelectorAll(`.image-gallery`)
+});
+
