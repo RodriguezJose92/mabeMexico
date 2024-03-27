@@ -26,7 +26,7 @@
 
 .mudiTooltip {
     position: absolute;
-    top: -70%;
+    top: -90%;
     right: -60%;
     width: 351px;
     text-align: center;
@@ -47,7 +47,7 @@
     color: #b5b5b5;
     width: 12px;
     bottom: -11px;
-    right: 15%;
+    right: 10%;
     border-bottom-right-radius: 20px;
 }
 
