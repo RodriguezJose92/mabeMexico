@@ -187,8 +187,7 @@ async function mudiExperience({skuNumber,fatherContainer}){
 };
 
 mudiExperience({
-    //skuNumber:`${document.body.querySelector('.code').innerHTML}_MabeMex`,
-    skuNumber:`${document.head.querySelector('[mudiSKU="LMP75205WDAB0"]').getAttribute('mudiSKU')}_MabeMex`,
+    skuNumber:`${document.body.querySelector('.code').innerHTML}_MabeMex`,
     fatherContainer: document.body.querySelectorAll(`.image-gallery`)
 });
 
