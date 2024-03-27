@@ -11,16 +11,18 @@
 
 .animate-Shaking {
     animation-name: shaking;
-    animation-duration: .3s;
-    animation-delay: 1s;
+    animation-duration: 9s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards
 }
 
 .btnMudi3D {
     width: 65px !important;
     cursor: pointer;
-    -webkit-box-shadow: 10px 10px 33px -18px rgba(0, 0, 0, 0.58);
-    -moz-box-shadow: 10px 10px 33px -18px rgba(0, 0, 0, 0.58);
-    box-shadow: 10px 10px 33px -18px rgba(0, 0, 0, 0.58);
+    -webkit-box-shadow: 10px 10px 33px -18px rgba(0, 0, 0, 0.329);
+    -moz-box-shadow: 10px 10px 33px -18px rgba(0, 0, 0, 0.329);
+    box-shadow: 10px 10px 33px -18px rgba(0, 0, 0, 0.329);
     border-radius: 50px;
 }
 

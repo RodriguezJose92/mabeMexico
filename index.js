@@ -44,6 +44,7 @@ function createButon(father){
     container.id    =`containerBtnsMudi`;
     container.classList.add(`ContainerBtnsMudi`);
 
+
         /* We create an informative poster */
         const 
         tooltip     = document.createElement('P');
@@ -57,6 +58,7 @@ function createButon(father){
         button3D.id = `btn3DProdId`;
         button3D.src= `https://cdn.jsdelivr.net/gh/RodriguezJose92/mabeMexico@latest/btn3D.png`;
         button3D.classList.add(`btnMudi3D`);
+        button3D.classList.add(`animate-Shaking`);
         button3D.addEventListener('click',createModal,false)
 
     /** Add tooltip and 3D buttton to "container" */
@@ -73,16 +75,6 @@ function createButon(father){
        document.body.querySelector('.ContainerBtnsMudi').style.top='0px'
     },5000);
 
-    if(screen.availWidth<500){
-        setInterval(() => {
-
-            document.body.querySelector('.btnMudi3D').classList.add('animate-Shaking');
-            setTimeout(()=>{
-                document.body.querySelector('.btnMudi3D').classList.remove('animate-Shaking');
-            },3000);
-
-        }, 7000);
-    };
 };
 
 function createModal(){
@@ -191,6 +183,7 @@ async function mudiExperience({skuNumber,fatherContainer}){
 
 mudiExperience({
     skuNumber:`${document.body.querySelector('.code').innerHTML}_MabeMex`,
+    //skuNumber:`${document.head.querySelector('[mudiSKU="LMP75205WDAB0"]').getAttribute('mudiSKU')}_MabeMex`,
     fatherContainer: document.body.querySelectorAll(`.image-gallery`)
 });
 
