@@ -79,9 +79,9 @@ function createButon(father){
             document.body.querySelector('.btnMudi3D').classList.add('animate-Shaking');
             setTimeout(()=>{
                 document.body.querySelector('.btnMudi3D').classList.remove('animate-Shaking');
-            },5000);
+            },3000);
 
-        }, 30000);
+        }, 7000);
     };
 };
 

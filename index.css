@@ -222,39 +222,39 @@
 
 @keyframes shaking {
     0% {
-        transform: translateX(0px);
+        transform: scale(1);
     }
 
     12.5% {
-        transform: translateX(5px);
+        transform: scale(1.1);
     }
 
     25% {
-        transform: translateX(0px);
+        transform: scale(1);
     }
 
     37.5% {
-        transform: translateX(-5px);
+        transform: scale(.9);
     }
 
     50% {
-        transform: translateX(0px);
+        transform: scale(1);
     }
 
     62.5% {
-        transform: translateX(5px);
+        transform: scale(1.1);
     }
 
     75% {
-        transform: translateX(0px);
+        transform: scale(1);
     }
 
     87.5% {
-        transform: translateX(-5px);
+        transform: scale(.9);
     }
 
     100% {
-        transform: translateX(0px);
+        transform: scale(1);
     }
 
 
