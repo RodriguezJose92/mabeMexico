@@ -8,6 +8,12 @@
     right: 0;
 }
 
+.animate-Shaking {
+    animation-name: shaking;
+    animation-duration: .3s;
+    animation-delay: 1s;
+}
+
 .btnMudi3D {
     width: 80px !important;
     cursor: pointer;
@@ -26,14 +32,14 @@
     background-color: #b5b5b5;
     padding: 0px 20px;
     border-radius: 50px;
+    opacity: 1;
     margin: 0;
     color: white;
     transform: scale(0.8);
-
 }
 
 .mudiTooltip::after {
-    content: '_';
+    content: "_";
     font-size: 10px;
     position: absolute;
     background-color: #b5b5b5;
@@ -211,4 +217,44 @@
         bottom: 0% !important;
         width: 40%;
     }
+}
+
+@keyframes shaking {
+    0% {
+        transform: translateX(0px);
+    }
+
+    12.5% {
+        transform: translateX(5px);
+    }
+
+    25% {
+        transform: translateX(0px);
+    }
+
+    37.5% {
+        transform: translateX(-5px);
+    }
+
+    50% {
+        transform: translateX(0px);
+    }
+
+    62.5% {
+        transform: translateX(5px);
+    }
+
+    75% {
+        transform: translateX(0px);
+    }
+
+    87.5% {
+        transform: translateX(-5px);
+    }
+
+    100% {
+        transform: translateX(0px);
+    }
+
+
 }

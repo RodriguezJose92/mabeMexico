@@ -67,6 +67,19 @@ function createButon(father){
     if(window.innerWidth>1000)father[0].appendChild(container);
     else  father[1].appendChild(container);
 
+    /** Hidden Tooltip */
+    setTimeout(()=>{
+       document.body.querySelector('.mudiTooltip').style.opacity = 0;
+    },5000);
+
+    if(screen.availWidth<500){
+        setInterval(() => {
+            console.log('shakeando')
+            document.body.querySelector('.btnMudi3D').classList.remove('animate-Shaking');
+            document.body.querySelector('.btnMudi3D').classList.add('animate-Shaking');
+        }, 10000);
+    }
+
 };
 
 function createModal(){
@@ -174,7 +187,8 @@ async function mudiExperience({skuNumber,fatherContainer}){
 };
 
 mudiExperience({
-    skuNumber:`${document.body.querySelector('.code').innerHTML}_MabeMex`,
+    //skuNumber:`${document.body.querySelector('.code').innerHTML}_MabeMex`,
+    skuNumber:`${document.head.querySelector('[mudiSKU="LMP75205WDAB0"]').getAttribute('mudiSKU')}_MabeMex`,
     fatherContainer: document.body.querySelectorAll(`.image-gallery`)
 });
 
