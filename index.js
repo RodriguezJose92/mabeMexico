@@ -76,15 +76,12 @@ function createButon(father){
         setInterval(() => {
 
             document.body.querySelector('.btnMudi3D').classList.add('animate-Shaking');
-
             setTimeout(()=>{
                 document.body.querySelector('.btnMudi3D').classList.remove('animate-Shaking');
-                console.log('terminando Shaking')
             },5000);
 
-        }, 10000);
-    }
-
+        }, 30000);
+    };
 };
 
 function createModal(){
