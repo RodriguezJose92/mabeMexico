@@ -74,9 +74,14 @@ function createButon(father){
 
     if(screen.availWidth<500){
         setInterval(() => {
-            console.log('shakeando')
-            document.body.querySelector('.btnMudi3D').classList.remove('animate-Shaking');
+
             document.body.querySelector('.btnMudi3D').classList.add('animate-Shaking');
+
+            setTimeout(()=>{
+                document.body.querySelector('.btnMudi3D').classList.remove('animate-Shaking');
+                console.log('terminando Shaking')
+            },5000);
+
         }, 10000);
     }
 
@@ -166,7 +171,7 @@ function initARDESK(){
 
     document.body.querySelector('.iframeMudi3D').appendChild(modalMudi)
 };
-
+// 
 async function mudiExperience({skuNumber,fatherContainer}){
 
     const 
