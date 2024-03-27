@@ -70,6 +70,7 @@ function createButon(father){
     /** Hidden Tooltip */
     setTimeout(()=>{
        document.body.querySelector('.mudiTooltip').style.opacity = 0;
+       document.body.querySelector('.ContainerBtnsMudi').style.top='0px'
     },5000);
 
     if(screen.availWidth<500){
