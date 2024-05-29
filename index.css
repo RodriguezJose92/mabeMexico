@@ -39,6 +39,7 @@
     margin: 0;
     color: white;
     transform: scale(0.8);
+    display:none;
 }
 
 .mudiTooltip::after {
