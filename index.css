@@ -17,8 +17,8 @@
     animation-fill-mode: forwards
 }
 
-.btnMudi3D {
-    width: 65px !important;
+#btn3DProdId {
+    width: 65px ;
     cursor: pointer;
     -webkit-box-shadow: 10px 10px 33px -18px rgba(0, 0, 0, 0.329);
     -moz-box-shadow: 10px 10px 33px -18px rgba(0, 0, 0, 0.329);
@@ -220,6 +220,10 @@
         top: 5%;
         bottom: 0% !important;
         width: 40%;
+    }
+
+    #btn3DProdId{
+        width:60px
     }
 }
 
